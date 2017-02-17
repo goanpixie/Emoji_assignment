@@ -1,0 +1,10 @@
+<h2>Share your Mood</h2>
+<% if @error %>
+	<p><%= @error %></p>
+<% end %>
+<form action="mood/show" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label>Please enter your emoji code here:</label>
+	<input type="string" name="mood">
+	<input type="submit" value="Check Code">
+</form>
